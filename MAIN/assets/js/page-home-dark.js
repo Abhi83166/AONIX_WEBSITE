@@ -117,17 +117,20 @@ $(document).ready(function () {
 		"retina_detect": true
 	});
 
-	// Initiate typed.js text effect (done custom for each typed text effect)
-	$(".animated-text-effect").typed({ 
-		// Enter your texts here, these texts are applied to dark homepages
-		strings: ["INSPIRE YOUR WORK^", "COMPREHENSIVE INNOVATIONS!^", "ADVANCE SOLUTIONS FOR INNOVATION^", "SOLUTIONS ESPECIALLY DESIGNED FOR ALL"], 
-		contentType: "text", 
-		typeSpeed: 15, 
-		loop: true, 
-		backDelay: 1200, 
-		showCursor: true, 
-	//	startDelay: 2200, // PRELOADER -- comment-out this line if you stop using page preloader
-		cursorChar: "|" 
+	$(".animated-text-effect").typed({
+		strings: ["AONIX"],
+		showCursor: false, // This will hide the cursor
+		onStringTyped: function() {
+			var animationName = 'heartbeat 1.5s infinite, colorChange 5s infinite, neonGlow 5s infinite';
+        $(".animated-text-effect").css('animation', animationName);
+		},
+		preStringTyped: function() {
+			$(".animated-text-effect span").css('animation', 'none');
+		}
 	});
+	
+	
+	
+	
 
 });

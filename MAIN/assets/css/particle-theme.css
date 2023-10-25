@@ -35,9 +35,30 @@
 
 body {
 	background-color: #0e1621;
-	font-family: 'Blinker', sans-serif;
+	font-family: 'Lato', sans-serif;
 	color: #647D89;
 }
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Reduced from 1.1 */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.animated-text-effect {
+    display: inline-block; /* ensure transform applies correctly */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    color: #fff;
+    animation: heartbeat 1.5s infinite;
+}
+
 
 
 /*
@@ -55,7 +76,7 @@ body {
 	right: 0;
 	bottom: 0;
 	z-index: 10000001;
-	background-color: #091019;
+	background-color: #161717;
 	opacity: 0;
 	pointer-events: none;
 }
@@ -112,7 +133,7 @@ body {
 	font-size: 22px;
 	line-height: 22px;
 	text-align: center;
-	color: #5d6c82;
+	color: #092857;
 	display: inline-block;
 }
 
@@ -134,8 +155,8 @@ body {
 	margin: -75px 0 0 -75px;
 	border-radius: 50%;
 	border: 3px solid transparent;
-	-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
+	-webkit-animation: spin 1.8s linear infinite;
+			animation: spin 1.8s linear infinite;
 }
  
 #loader:before {
@@ -147,8 +168,8 @@ body {
 	bottom: 5px;
 	border-radius: 50%;
 	border: 3px solid transparent;
-	-webkit-animation: spin 3s linear infinite;
-			animation: spin 3s linear infinite;
+	-webkit-animation: spin 2.5s linear infinite;
+			animation: spin 2.5s linear infinite;
 }
 
 #loader:after {
@@ -160,8 +181,8 @@ body {
 	bottom: 15px;
 	border-radius: 50%;
 	border: 3px solid transparent;
-	-webkit-animation: spin 1.5s linear infinite;
-			animation: spin 1.5s linear infinite;
+	-webkit-animation: spin 1.3s linear infinite;
+			animation: spin 1.3s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -208,7 +229,7 @@ body {
 	bottom: 0;
 	overflow: hidden;
 	z-index: 10000;
-	background-color: #091019;
+	background-color: #000000;
 	opacity: 1;
 }
 
@@ -239,7 +260,7 @@ section.warper.is-inactive {
 }
 
 section.warper.darker {
-	background: #091019;
+	background: #0d0d0d;
 }
 
 .pa-loader.is-inactive div.spinn {
@@ -258,7 +279,7 @@ div.spinn {
 div.spinn i {
 	display: block;
 	position: absolute;
-	background: rgba(140,240,255,0.11);
+	background: rgba(73, 1, 75, 0.11);
 }
 
 div.spinn i:nth-child(1) {
@@ -763,7 +784,7 @@ nav a em {
 	}
 
 	.nav-content .pa-social-section .pa-p-v1 {
-		font-size: 14px;
+		font-size: 24px;
 		margin-top: 4px;
 		line-height: 22px;
 		padding-right: 15px;
@@ -1127,6 +1148,7 @@ p.pa-p-v1.pa-dark {
 }
 
 .pa-p-v2.pa-bright {
+	font-family: Lato,sans-serif;
 	color: #ffffff;
 }
 
@@ -1145,10 +1167,10 @@ p.pa-p-v1.pa-dark {
 }
 
 .pa-h1-v1 {
-	font-family: play, sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 44px;
 	line-height: 53px;
-	font-weight: 300;
+	
 }
 
 .pa-h1-v1 strong, 
@@ -1162,11 +1184,31 @@ p.pa-p-v1.pa-dark {
 }
 
 .pa-h1-v1.pa-bright {
-	color: #FFFFFF;
+	font-family: 'Lato', sans-serif;
+	font-weight: 350;
+	color: #3b1616;
 }
+
+.pa-h1-v1.pa-bright_spaceverse {
+	font-family: 'Lato', sans-serif;
+	font-weight: 350;
+	color: #ede9e9;
+}
+
+.pa-h1-v1.pa-bright_rebuild {
+	font-family: 'Lato', sans-serif;
+	font-weight: 350;
+	color: #fbfafa;
+}
+
 
 .pa-h1-v1.pa-dark {
 	color: #0C171F;
+}
+.pa-h1-v1.pa-bright_Eduverse {
+	font-family: 'Lato', sans-serif;
+	font-weight: 350;
+	color: #ece9e9;
 }
 
 .pa-h1-v2 {
@@ -1206,7 +1248,7 @@ p.pa-p-v1.pa-dark {
 }
 
 .pa-h1-inner-page.typed-text {
-	font-family: 'Blinker', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 80px;
 	line-height: 90px;
 	font-weight: 300;
@@ -1232,10 +1274,10 @@ p.pa-p-v1.pa-dark {
 }
 
 .pa-h2-v2-hero-subhead {
-	margin-bottom: 40px;
-	font-size: 37px;
-	line-height: 49px;
-	font-weight: 200;
+	margin-bottom: 100px;
+	font-size: 27px;
+	line-height: 59px;
+	font-weight: 200;	
 }
 
 .pa-h2-v2-hero-subhead.pa-bright {
@@ -1243,8 +1285,28 @@ p.pa-p-v1.pa-dark {
 }
 
 .pa-h2-v2-hero-subhead.pa-white {
-	color: #ffffff;
-}
+    font-size: 36px;
+    font-weight: 240;
+    color: #e7cbb0;
+    white-space: pre-wrap; /* Retain spaces and wrap if necessary */
+    
+    /* Gradient Color
+    background-image: linear-gradient(to right, #edf50f, #1667f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback for browsers that don't support the above properties */
+     
+    /* Neon Glow Effect */
+    /* text-shadow: 
+        0 0 5px #f0c192,  
+        0 0 10px #f0c192,
+        0 0 15px #f0c192,
+        0 0 20px #f0c192,
+        0 0 25px #f0c192; */
+		text-shadow: rgb(228, 217, 174) 1px 0 15px;
+	}
+
 
 .pa-h2-v2-hero-subhead.pa-dark {
 	color: #657E8A;
@@ -1630,7 +1692,7 @@ body.pa-dark section.pa-standard-section { /* normal dark section */
 }
 
 body.pa-dark section.pa-standard-section.pa-dark { /* dark section for dark home */
-	background-color: #050B20;
+	background-color: #211f68;
 }
 
 /* Section that centers content vertically */
@@ -1769,14 +1831,14 @@ table a,
 
 
 /* Default Hero */
-
+/* Default Hero */
 .pa-hero {
 	min-height: 326px;
 }
 
 .pa-hero-content {
-	margin-top: -100px;
-	margin-top: -12vh;
+	position: relative;
+	margin-top: 90vh; /* This ensures the container takes full height of its parent */
 }
 
 .row.pa-hero-logo {
@@ -1816,10 +1878,39 @@ table a,
 	font-family: play, sans-serif;
 }
 
+@keyframes colorChange {
+    0%, 100% { color: #FFD700; } /* Golden */
+    25% { color: #1E90FF; }     /* Royal Blue */
+    50% { color: #4B0082; }     /* Indigo */
+    75% { color: #20B2AA; }     /* LightSeaGreen */
+}
+
+@keyframes neonGlow {
+    0%, 100% { 
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+    }
+    25% { 
+        text-shadow: 0 0 10px #1E90FF, 0 0 20px #1E90FF, 0 0 30px #1E90FF, 0 0 40px #1E90FF;
+    }
+    50% { 
+        text-shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082, 0 0 40px #4B0082;
+    }
+    75% { 
+        text-shadow: 0 0 10px #20B2AA, 0 0 20px #20B2AA, 0 0 30px #20B2AA, 0 0 40px #20B2AA;
+    }
+}
+
 .typed-text.mega-typed {
-	font-size: 76px;
-	line-height: 89px;
-	margin-bottom: 10px;
+	font-family: 'Tilt Neon', sans-serif;
+    font-size: 66px;
+    line-height: 89px;
+    position: absolute;
+    bottom: 30%;  /* Adjust this value to push it further down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgba(173, 216, 230, 0.8), 0 0 40px rgba(173, 216, 230, 0.8);
+ 
+    
 }
 
 /* Hero Video */
@@ -1864,31 +1955,46 @@ video.pa-video {
 }
 
 
-/*
- * 10. CTA Section V1
- * ==================
- */
 
 .pa-cta-v1 {
 	padding: 260px 0;
 }
 
 .pa-stripe-heading {
-	background-color: #050B20;
-	padding: 20px;
+    padding: 20px;
+
+    /* Gradient Color */
+    background-image: linear-gradient(to right, #ffd932cf, #000000);  /* From #050B20 to a slightly lighter shade for demonstration */
 }
+
 
 body.pa-dark .pa-stripe-heading {
-	background-color: #080e29;
+    /* Gradient Color for dark mode */
+    background-image: linear-gradient(to right,#ffd932cf,#000000 );  /* From #000000 to a slightly lighter shade for demonstration */
 }
 
+
 .pa-stripe-subheading {
-	border-top: 1px solid #215356;
-	background-color: #011223;
+	border-top: 1px solid #c5f543;
+	background-color: #211f68;
 	padding: 10px 15px 1px;
 }
 
+.pa-stripe-heading_eduverse {
+    padding: 20px;
 
+    /* Gradient Color */
+    background-image: linear-gradient(to right, #835B3C, #000000);  /* From #050B20 to a slightly lighter shade for demonstration */
+}
+body.pa-dark .pa-stripe-heading_eduverse {
+    /* Gradient Color for dark mode */
+    background-image: linear-gradient(to right,#835B3C,#000000 );  /* From #000000 to a slightly lighter shade for demonstration */
+}
+.pa-stripe-subheading_eduverse {
+	border-top: 1px solid #835B3C;
+	background-color: #835B3C;
+	padding: 10px 15px 1px;
+}
 /*
  * 11. Portfolio Section
  * =====================
@@ -1899,7 +2005,7 @@ body.pa-dark .pa-stripe-heading {
 }
 
 .pa-dark #portfolio {
-	background-color: #080d15;
+	background-color: #000000;
 }
 
 .pa-portfolio-thumb { 
@@ -1995,7 +2101,7 @@ body.pa-dark .pa-stripe-heading {
 }
 
 .pa-portfolio-thumb-heading {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	color: #FFFFFF;
 	font-size: 20px;
 	font-weight: 400;
@@ -2004,8 +2110,8 @@ body.pa-dark .pa-stripe-heading {
 
 .pa-portfolio-thumb-desc {
 	color: #848484;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
 	font-weight: 300;
 }
 

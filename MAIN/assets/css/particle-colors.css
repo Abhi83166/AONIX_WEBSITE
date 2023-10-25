@@ -14,15 +14,15 @@
 .pa-color-secondary-b-rgba { color: rgba(26, 189, 239,1); }
 
 #loader {
-	border-top-color: #0ba7c6;
+	border-top-color: #007BFF;
 }
 
 #loader:before {
-	border-top-color: #4a74ff;
+	border-top-color: #FFD700;
 }
 
 #loader:after {
-	border-top-color: #4a74ff;
+	border-top-color: #9400D3;
 }
 
 nav a em {
@@ -30,6 +30,7 @@ nav a em {
 }
 
 .pa-h2-v2-hero-subhead strong {
+	font-family: 'Rajdhani', sans-serif;
 	color: #efefef;
 }
 
@@ -52,12 +53,12 @@ nav a em {
 a,
 a:hover, 
 a:hover .pa-h3-v1.pa-bright {
-	color: #0ba7c6;
+	color: #0a3d64;
 }
 
 button[type="submit"]:hover, 
 input[type="submit"]:hover {
-	background-color: #0ba7c6;
+	background-color: #a6a41e;
 	border-color: #0ba7c6;
 }
 
@@ -108,23 +109,24 @@ a.pa-button-secondary {
 }
 
 .pa-portfolio-thumb-heading:hover {
-	color: #00f2ff;
+	font-size: 28px;
+	color: #9a9236;
 }
 
 .pa-portfolio-thumb-hover-icon {
-	color: #1b749a;
+	color: #9a9236;
 }
 
 .pa-icon-list-icon i {
-	color: #0ba7c6;
+	color: #9a9236;
 }
 
 .pa-what-we-do .pa-h1-v2.pa-bright strong {
-	color: #0ba7c6;
+	color: #9a9236;
 }
 
 .pa-serv-list-icon i { /* MQ */
-	color: #0ba7c6;
+	color: #9a9236;
 }
 
 .pa-skill-bar {
